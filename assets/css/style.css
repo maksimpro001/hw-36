@@ -1,0 +1,64 @@
+body {
+  overflow: hidden;
+}
+
+.wraper {
+  margin: auto;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.button {
+  background-color: gray;
+  border-radius: 20px;
+  padding: 20px 50px;
+  font-size: 20px;
+  color: black;
+}
+
+.block {
+  font-family: "Oswald";
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
+}
+
+.button:hover {
+  animation: 0.1s ease-in infinite potraska;
+}
+
+.active {
+  animation-name: left-road;
+  animation-duration: 5s;
+}
+
+@keyframes left-road {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -150%;
+  }
+}
+
+@keyframes potraska {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
